@@ -10,7 +10,7 @@ export default function HomePage() {
       </div>
 
       <section className="hero">
-        <h2>Stay organised, stay ahead 🎓</h2>
+        <h2>The Campus Companion App</h2>
         <p>
           Your all-in-one student hub for events, timetables, meals, and campus support.
         </p>
