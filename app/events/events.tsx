@@ -14,10 +14,10 @@ export default function EventsPage() {
             <h3>{event.title}</h3>
 
             <p>
-              📅 {formatDate(event.date)}
+              {formatDate(event.date)}
             </p>
 
-            <p>📍 {event.location}</p>
+            <p>{event.location}</p>
 
             <p>{event.description}</p>
           </div>
