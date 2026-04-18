@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Freshers Welcome Night",
+    "date": "2026-09-10",
+    "location": "Main Hall",
+    "description": "Music, games, and student meet & greet."
+  },
+  {
+    "id": 2,
+    "title": "Coding Society Meetup",
+    "date": "2026-09-12",
+    "location": "Room B201",
+    "description": "Intro to web development workshop."
+  },
+   {
+    "id": 3,
+    "title": "Petting Zoo Coming In",
+    "date": "2026-09-14",
+    "location": "Outside of Main Enterance",
+    "description": "A petting zoo is being brought to the collage."
+  },
+   {
+    "id": 4,
+    "title": "Wrestling Event",
+    "date": "2026-09-01",
+    "location": "Canteen",
+    "description": "Wrestling Matches in the Canteen."
+  }
+]
