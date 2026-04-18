@@ -13,8 +13,8 @@ export default function EventCard({ event }: { event: Event }) {
     <div className="card">
       <h3>{event.title}</h3>
 
-      <p>📅 {formatDate(event.date)}</p>
-      <p>📍 {event.location}</p>
+      <p>{formatDate(event.date)}</p>
+      <p>{event.location}</p>
 
       <p>{event.description}</p>
     </div>
