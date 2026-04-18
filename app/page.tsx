@@ -25,9 +25,6 @@ export default function HomePage() {
           <li>
             <Link href="/canteen"> Canteen Menu</Link>
           </li>
-          <li>
-            <Link href="/lost-found"> Lost & Found</Link>
-          </li>
         </ul>
       </section>
     </div>
