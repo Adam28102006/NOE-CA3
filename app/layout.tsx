@@ -23,7 +23,6 @@ export default function RootLayout({
               <li><Link href="/events">Events</Link></li>
               <li><Link href="/timetable">Timetable</Link></li>
               <li><Link href="/canteen">Canteen</Link></li>
-              <li><Link href="/lost-found">Lost & Found</Link></li>
             </ul>
           </nav>
         </header>
