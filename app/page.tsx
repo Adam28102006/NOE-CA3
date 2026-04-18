@@ -1,38 +1,43 @@
 import Link from 'next/link'
-
 import AccessibilityToggle from '@/componants/acc_toggle'
-
-<AccessibilityToggle />
 
 export default function HomePage() {
   return (
-    <div>
-      <h2>Welcome to Campus Companion</h2>
+    <main style={styles.page}>
+      
+      <div style={styles.topBar}>
+        <h1 style={styles.title}>Campus Companion</h1>
+        <AccessibilityToggle />
+      </div>
 
-      <p>
-        This app helps first-year students stay organised and informed about campus life.
-      </p>
-
-      <section>
-        <h3>Features</h3>
-        <ul style={styles.list}>
-          <li>
-            <Link href="/events"> View Events</Link>
-          </li>
-          <li>
-            <Link href="/timetable"> Check Timetable</Link>
-          </li>
-          <li>
-            <Link href="/canteen"> Canteen Menu</Link>
-          </li>
-        </ul>
+      <section style={styles.hero}>
+        <h2 style={styles.heading}>Stay organised, stay ahead 🎓</h2>
+        <p style={styles.subtext}>
+          Your all-in-one student hub for events, timetables, meals, and campus support.
+        </p>
       </section>
-    </div>
-  )
-}
 
-const styles = {
-  list: {
-    lineHeight: '2rem',
-  },
+      <section style={styles.grid}>
+        <Link href="/events" style={styles.card}>
+          <h3>Events</h3>
+          <p>Discover what’s happening on campus</p>
+        </Link>
+
+        <Link href="/timetable" style={styles.card}>
+          <h3>Timetable</h3>
+          <p>Check your weekly class schedule</p>
+        </Link>
+
+        <Link href="/canteen" style={styles.card}>
+          <h3>🍽 Canteen</h3>
+          <p>See today’s menu options</p>
+        </Link>
+
+        <Link href="/lost-found" style={styles.card}>
+          <h3> The Lost & Found</h3>
+          <p>Find or report missing items</p>
+        </Link>
+      </section>
+    </main>
+  )
 }
