@@ -12,8 +12,8 @@ export default function CanteenPage() {
           <div key={item.id} className="card">
             <h3>{item.item}</h3>
 
-            <p>💰 €{item.price.toFixed(2)}</p>
-            <p>🍽 {item.category}</p>
+            <p>€{item.price.toFixed(2)}</p>
+            <p>{item.category}</p>
           </div>
         ))}
       </div>
