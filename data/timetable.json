@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "module": "Web Development",
+    "day": "Monday",
+    "time": "10:00",
+    "room": "Lab 1"
+  },
+  {
+    "id": 2,
+    "module": "Databases",
+    "day": "Monday",
+    "time": "12:00",
+    "room": "Room A105"
+  },
+    {
+    "id": 3,
+    "module": "Coding",
+    "day": "Tuesday",
+    "time": "13:00",
+    "room": "Room C205"
+  },
+    {
+    "id": 4,
+    "module": "Databases",
+    "day": "Wednesday",
+    "time": "9:00",
+    "room": "Room A105"
+  },
+    {
+    "id": 5,
+    "module": "Coding",
+    "day": "Thursday",
+    "time": "10:00",
+    "room": "Lab 1"
+  },
+    {
+    "id": 6,
+    "module": "Databases",
+    "day": "Thursday",
+    "time": "13:00",
+    "room": "Room C205"
+  },
+    {
+    "id": 7,
+    "module": "Web Development",
+    "day": "Friday",
+    "time": "11:00",
+    "room": "Lab 1"
+  }
+]
