@@ -109,3 +109,53 @@ button:hover {
   opacity: 0.4;
   text-align: center;
 }
+
+.page {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 1.2rem;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #eee;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
