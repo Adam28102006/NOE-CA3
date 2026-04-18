@@ -3,26 +3,26 @@ import { formatDate } from '@/lib/utils'
 
 export default function EventsPage() {
   return (
-    <div>
-      <h2>Campus Events</h2>
-
-      <p>Upcoming student events and activities.</p>
-
-      <div>
+    <main className="page">
+     
+      <div className="pageHeader">
+        <h2>Campus Events</h2>
+        <p>Upcoming student events and activities</p>
+      </div>
+      
+      <div className="eventGrid">
         {events.map((event) => (
-          <div key={event.id} className="card">
-            <h3>{event.title}</h3>
+          <div key={event.id} className="eventCard">
+            <div className="eventTop">
+              <h3>{event.title}</h3>
+              <span className="eventDate">{formatDate(event.date)}</span>
+            </div>
 
-            <p>
-              {formatDate(event.date)}
-            </p>
-
-            <p>{event.location}</p>
-
-            <p>{event.description}</p>
+            <p className="eventLocation"> {event.location}</p>
+            <p className="eventDesc">{event.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </main>
   )
 }
