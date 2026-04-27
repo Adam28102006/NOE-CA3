@@ -1,5 +1,43 @@
 import events from '@/data/events.json'
 import { formatDate } from '@/lib/utils'
+import { GetServerSideProps } from 'next';
+import { getAllClusteredEvents, getSimilarEvents, Event } from '../ml/eventCluster';
+
+interface EventsPageProps {
+  events: Event[];
+  similarToFirst: Event[];
+}
+
+export default function EventsPage({ events, similarToFirst }: EventsPageProps) {
+  return (
+    <div>
+      <h1>All Events</h1>
+      <ul>
+        {events.map(e => (
+          <li key={e.id}>
+            {e.title} - Cluster {e.cluster}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Events similar to first event</h2>
+      <ul>
+        {similarToFirst.map(e => (
+          <li key={e.id}>{e.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const events = getAllClusteredEvents();
+  const similarToFirst = getSimilarEvents(events[0].id);
+
+  return { props: { events, similarToFirst } };
+};
+
+
 
 export default function EventsPage() {
   return (
