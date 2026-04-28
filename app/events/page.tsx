@@ -6,6 +6,14 @@ export default async function EventsPage() {
     ? await getSimilarEvents(events[0].id)
     : [];
 
+  function formatDate(date: string | number | Date) {
+  return new Date(date).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
+  
   return (
     <main className="page">
       <div className="pageHeader">
