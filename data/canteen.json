@@ -3,18 +3,35 @@
     "id": 1,
     "item": "Chicken Wrap",
     "price": 5.50,
+    "day": "Monday",
     "category": "Hot Food"
   },
   {
     "id": 2,
     "item": "Veggie Pasta",
     "price": 4.80,
-    "category": "Hot Food"
+    "day": "Monday",
+    "category": "Vegitarian Hot Food"
   },
   {
     "id": 3,
     "item": "Coffee",
     "price": 2.00,
+    "day": "Monday",
     "category": "Drinks"
-  }
+  },
+  {
+    "id": 4,
+    "item": "Pizza",
+    "price": 6.00,
+    "day": "Tuesday",
+    "category": "Vegitarian Hot Food"
+  },
+  {
+    "id": 5,
+    "item": "Coffee",
+    "price": 2.00,
+    "day": "Monday",
+    "category": "Drinks"
+  },
 ]
