@@ -1,11 +1,12 @@
 import canteen from '@/data/canteen.json'
-
+import AccessibilityToggle from '@/componants/acc_toggle'
 export default function CanteenPage() {
   return (
     <main className="page">
     
       <div className="pageHeader">
         <h2>Canteen Menu</h2>
+        <AccessibilityToggle />
         <p>Today’s available food and drinks</p>
       </div>
 
