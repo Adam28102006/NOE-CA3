@@ -1,3 +1,5 @@
+import { getAllClusteredEvents, getSimilarEvents } from "../ml/eventClusters.ts";
+
 export default async function EventsPage() {
   const events = await getAllClusteredEvents();
   const similarToFirst = events.length
