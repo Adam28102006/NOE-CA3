@@ -1,5 +1,5 @@
 import timetable from '@/data/timetable.json'
-
+import AccessibilityToggle from '@/componants/acc_toggle'
 type TimetableItem = {
   id: number
   module: string
@@ -23,6 +23,7 @@ export default function TimetablePage() {
   return (
     <div>
       <h2>Weekly Timetable</h2>
+      <AccessibilityToggle />
       <p>Your class schedule.</p>
 
       <div className="timetable-body">
