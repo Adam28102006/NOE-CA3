@@ -1,0 +1,116 @@
+this is a list of all of the ai prompts that were used to fix and change things.
+
+- prompt- How would i refactor my code (code pasted, was a few hundered lines, so for brevity, will not be pasteing in the example) to not rely on nmp for the eventcluster page?
+
+import fs from "fs";
+import path from "path";
+
+export interface Event {
+  id: number;
+  title: string;
+  description: string;
+  cluster?: number;
+}
+
+let events: Event[] = [];
+let initialized = false;
+
+/**
+ * Simple text normalization
+ */
+function tokenize(text: string): string[] {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+/**
+ * Simple similarity score between two events
+ */
+function similarity(a: string, b: string): number {
+  const aTokens = new Set(tokenize(a));
+  const bTokens = new Set(tokenize(b));
+
+  let match = 0;
+  aTokens.forEach(word => {
+    if (bTokens.has(word)) match++;
+  });
+
+  return match;
+}
+
+/**
+ * Naive clustering: assign each event to nearest "centroid-like" seed
+ */
+function assignClusters(items: Event[], numClusters: number): void {
+  const clusters: Event[][] = Array.from({ length: numClusters }, () => []);
+
+  // pick first N events as rough "centers"
+  const seeds = items.slice(0, numClusters);
+
+  for (const event of items) {
+    let bestCluster = 0;
+    let bestScore = -1;
+
+    seeds.forEach((seed, idx) => {
+      const score = similarity(
+        `${seed.title} ${seed.description}`,
+        `${event.title} ${event.description}`
+      );
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestCluster = idx;
+      }
+    });
+
+    clusters[bestCluster].push(event);
+  }
+
+  clusters.forEach((cluster, idx) => {
+    cluster.forEach(e => {
+      e.cluster = idx;
+    });
+  });
+}
+
+/**
+ * Load + initialize data once
+ */
+function initializeClusters(): void {
+  if (initialized) return;
+
+  const filePath = path.join(process.cwd(), "data", "events.json");
+  const rawData = fs.readFileSync(filePath, "utf-8");
+  events = JSON.parse(rawData);
+
+  const numClusters = Math.min(3, events.length || 1);
+
+  assignClusters(events, numClusters);
+
+  initialized = true;
+}
+
+/**
+ * Get similar events (same cluster)
+ */
+export function getSimilarEvents(eventId: number): Event[] {
+  initializeClusters();
+
+  const target = events.find(e => e.id === eventId);
+  if (!target) return [];
+
+  return events.filter(
+    e => e.cluster === target.cluster && e.id !== eventId
+  );
+}
+
+/**
+ * Get all events (with clusters assigned)
+ */
+export function getAllClusteredEvents(): Event[] {
+  initializeClusters();
+  return events;
+}
