@@ -1,4 +1,4 @@
-import { getAllClusteredEvents, getSimilarEvents } from "../ml/eventClusters.ts";
+import { getAllClusteredEvents, getSimilarEvents } from "@/ml/eventClusters";
 
 export default async function EventsPage() {
   const events = await getAllClusteredEvents();
