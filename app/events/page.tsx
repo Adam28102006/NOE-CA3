@@ -1,5 +1,5 @@
 import { getAllClusteredEvents, getSimilarEvents } from "@/ml/eventcluster";
-
+import AccessibilityToggle from '@/componants/acc_toggle'
 export default async function EventsPage() {
   const events = await getAllClusteredEvents();
   const similarToFirst = events.length
@@ -19,6 +19,7 @@ export default async function EventsPage() {
       <div className="pageHeader">
         <h2>Campus Events</h2>
         <p>Upcoming student events and activities</p>
+        <AccessibilityToggle />
       </div>
 
       <div className="eventGrid">
