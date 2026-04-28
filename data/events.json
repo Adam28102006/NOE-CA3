@@ -27,4 +27,20 @@
     "location": "Canteen",
     "description": "Wrestling Matches in the Canteen."
   }
+  {
+    "id": 5,
+    "title": "Freshers Meetup",
+    "date": "2026-09-12",
+    "location": "Room 45",
+    "description": "Meetup for first year students."
+  },
+    {
+    "id": 6,
+    "title": "Welcome to collage",
+    "date": "2026-09-12",
+    "location": "Room B201",
+    "description": "This is to show the Machine Learning Works."
+  },
+
+
 ]
