@@ -234,10 +234,17 @@ button:hover {
   line-height: 1.4;
 }
 .menuGrid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
 .menuColumn {
-  flex: 1;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
 }
