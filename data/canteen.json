@@ -29,9 +29,51 @@
   },
   {
     "id": 5,
-    "item": "Coffee",
-    "price": 2.00,
-    "day": "Monday",
-    "category": "Drinks"
+    "item": "Chips",
+    "price": 3.00,
+    "day": "Tuesday",
+    "category": "Vegitarian Hot Food"
+  },
+  {
+    "id": 6,
+    "item": "Burger",
+    "price": 6.00,
+    "day": "Wednesday",
+    "category": "Hot Food"
+  },
+  {
+    "id": 7,
+    "item": "Salad",
+    "price": 4.00,
+    "day": "Wednesday",
+    "category": "Vegitarian Cold Food"
+  },
+  {
+    "id": 8,
+    "item": "Chicken and Rice",
+    "price": 6.00,
+    "day": "Thursday",
+    "category": "Hot Food"
+  },
+  {
+    "id": 9,
+    "item": "Mixed Grilled Vegitables",
+    "price": 6.00,
+    "day": "Thursday",
+    "category": "Vegitarian Hot Food"
+  },
+  {
+    "id": 10,
+    "item": "Tofu Bowl",
+    "price": 5.00,
+    "day": "Friday",
+    "category": "Vegitarian Hot Food"
+  },
+  {
+    "id": 11,
+    "item": "Beef Bowl",
+    "price": 6.00,
+    "day": "Friday",
+    "category": "Hot Food"
   },
 ]
