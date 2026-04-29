@@ -6,10 +6,10 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'] as const
 type Day = typeof days[number]
 
 type CanteenItem = {
-  id: string
-  day: Day
+  id: number
   item: string
   price: number
+  day: string
   category: string
 }
 
