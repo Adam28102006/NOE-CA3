@@ -78,6 +78,21 @@ button:hover {
   color: white;
 }
 
+.high-contrast .menuGrid {
+  background-color: black;
+  color: white;
+}
+
+.high-contrast .timetable-column {
+  background-color: black;
+  color: white;
+}
+
+.high-contrast .menuColumn {
+  background-color: black;
+  color: white;
+}
+
 .high-contrast a {
   color: black;
 }
