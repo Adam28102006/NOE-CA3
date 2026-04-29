@@ -68,6 +68,16 @@ button:hover {
   color: white;
 }
 
+.high-contrast .eventCard {
+  background-color: black;
+  color: white;
+}
+
+.high-contrast .timetable-card {
+  background-color: black;
+  color: white;
+}
+
 .high-contrast a {
   color: black;
 }
