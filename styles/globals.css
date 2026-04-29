@@ -233,3 +233,11 @@ button:hover {
   color: #333;
   line-height: 1.4;
 }
+.menuGrid {
+  display: flex;
+  gap: 1rem;
+}
+
+.menuColumn {
+  flex: 1;
+}
